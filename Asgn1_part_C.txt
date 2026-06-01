@@ -1,0 +1,17 @@
+Asgn1_part_C
+When training data, we provide audio files for it to train from. 
+Now for model to self evaluate, say if we used accuracy, and data provided mostly contained a particular emotion, the model is told about its accuracy,
+but this accuracy will highly be dependent on the number of emotions. say for example happy emotion is 80, in total 100 provided audio files. the model, even if has high accuracy would still might miss other emotions, while training as the weigtage of happy emotion is high.
+
+Accuracy= (correct_predicted_emotion's_number)/(total_emotion's_number)
+
+in case of UAR, it calculates something called "Recall" for each particular emotion.
+
+Recall= (correct_predicted_number_of_a_particular_emotion)/(total_number_of_particular_emotion)
+
+This makes each emotion equally balanced.
+Then, UAR just averages all different emotions available in file, i.e
+
+UAR= [SUM OF (Recall_of_all_emotions)]  / [number of types of emotions available]
+
+If a model uses accuracy to train itself, it will have a biased opinion that, most data will be correct if it is highest in dataset. But this ignores the minor emotions which exist, this can make the model incapable of ever identifying minor emotions. UAR prevents that.
