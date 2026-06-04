@@ -15,3 +15,15 @@ Then, UAR just averages all different emotions available in file, i.e
 UAR= [SUM OF (Recall_of_all_emotions)]  / [number of types of emotions available]
 
 If a model uses accuracy to train itself, it will have a biased opinion that, most data will be correct if it is highest in dataset. But this ignores the minor emotions which exist, this can make the model incapable of ever identifying minor emotions. UAR prevents that.
+Task-2
+This task was focused on using ravdess data on extracting data using opensmile,
+the data includes 88 parameters such as pitch, loudness, etc.
+The part A of this task, mainly focused on extracting these features of a single audio file.
+    F0semitoneFrom27.5Hz_sma3nz_amean measures the pitch, ie the frequency at which the audio wave oscillate on an average.
+    loudness_sma3_amean measures the amplitude, ie the amplitude at which the audio wave oscillate on an average.
+    mfcc1_sma3_amean measures the slope of broad energy distribution across the audio.
+The part B of this task, was to use the part A data for each audio and form a dataset of the overall ravdess data.
+The part c of this task, the highest mean pitch comes out to be of "fearful" emotion, mostly because fear emotion is shouted.
+loudness_sma3_percentile80.0                loudness_sma3_pctlrange0-2                    
+F0semitoneFrom27.5Hz_sma3nz_percentile50.0  F0semitoneFrom27.5Hz_sma3nz_percentile20.0 
+are the top 2 highly correlated features. If the answer was to be considered using features, we can see that energy highly correlates with loudness.
