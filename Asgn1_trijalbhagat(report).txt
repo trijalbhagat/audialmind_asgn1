@@ -27,3 +27,7 @@ The part c of this task, the highest mean pitch comes out to be of "fearful" emo
 loudness_sma3_percentile80.0                loudness_sma3_pctlrange0-2                    
 F0semitoneFrom27.5Hz_sma3nz_percentile50.0  F0semitoneFrom27.5Hz_sma3nz_percentile20.0 
 are the top 2 highly correlated features. If the answer was to be considered using features, we can see that energy highly correlates with loudness.
+
+
+Task-3
+
