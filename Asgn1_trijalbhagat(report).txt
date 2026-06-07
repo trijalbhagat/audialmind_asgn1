@@ -30,4 +30,46 @@ are the top 2 highly correlated features. If the answer was to be considered usi
 
 
 Task-3
+part A-
+1.SVM forms different dimension for each feature, with there being 88 features.Then this is hydimension is used to decide which emotion lies where, with defined hyperplane which differentiates emotions from each other. We need a standardscaler for each feature to be of weight, this ensures that each feature is given equal importance which creating this hyperdimension.
+2. SVM Mean Accuracy: 0.6936711318190641
+SVM Accuracy Std: 0.03571881348832921
+SVM Mean UAR: 0.6994736842105262
+SVM UAR Std: 0.033875283822119615
+3. The confusion matrix is provided. The most common confused is calm and sad. This is mostly because they share similar loudness and pitch.
+4. The value of C, regularization parameter. UAR was more accurate for values of C closer to 10.
+
+part B-
+1.Random Forest Mean Accuracy: 0.8083187730537761
+Random Forest Accuracy Std: 0.0371916664934928
+Random Forest Mean UAR: 0.8175438596491228
+Random Forest UAR Std: 0.03589484820732082
+2.plot of eGEMAPS is given in repo.
+3.Pitch-related features are the most dominant, which aligns with the fact that emotional states often influence vocal frequency, with high-energy emotions showing greater pitch variation. Energy-related features such as loudness are also significant, as emotions like anger and happiness tend to produce louder speech, while calmer emotions have lower intensity. Additionally, spectral features (e.g., spectral flux, jitter, shimmer) capture voice quality and subtle variations in speech production.
+
+Part C-
+	Model	    Features    Mean Acc.	Mean UAR	UAR Std
+	SVM (RBF)	eGeMAPS	    0.693671	0.699474	0.033875
+Random Forest	eGeMAPS	    0.808319	0.817544	0.035895
+I will recommend the Random forest model, because it has produced a result of higher accuracy and UAR compared to SVM model.
+
+
+Task-4
+Part A-
+ "01": "neutral",
+"02": "calm",
+"03": "happy",
+"04": "sad",
+"05": "angry",
+"06": "fearful",
+"07": "disgust",
+"08": "surprised"
+ The emotions calm and sad, and angry and disgust, these pairs appear very similar in the UMAP.
+for n value of 30, the structure seem to make proper difference between emotions and graph appears more spreaout.
+While value of n smaller, here 5, gives more of overlapping points on each other and clear seperation can be seen between different emotions.
+Part B-
+In raw projection, the data appears more spread out and has clearer structure, with emotions forming their own clusters together.
+While in standard projection, the data appears very close to each other, because every parameter is supposed to have equal weight.It is compact, but there less seperation between groups.
+Dimensionality reduction is useful because it transforms high-dimensional feature data into a lower-dimensional space, so it then be easily studied and visualised.
+This also helps locate which emotions are closer to each other are more similar to each other and helps model decide emotion better.
 
