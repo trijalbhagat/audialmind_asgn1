@@ -73,3 +73,17 @@ While in standard projection, the data appears very close to each other, because
 Dimensionality reduction is useful because it transforms high-dimensional feature data into a lower-dimensional space, so it then be easily studied and visualised.
 This also helps locate which emotions are closer to each other are more similar to each other and helps model decide emotion better.
 
+Task-5
+Part A-
+Train samples: 809
+Test samples: 203
+Part B-
+Total Trainable Parameters: 5094
+
+Part C-
+Test Accuracy: 0.2955665024630542
+Test UAR: 0.27027027027027023 
+The test accuracy and UAR for CNN can be seen is very less compared to both SVM and random forest.
+The major disadvantage of CNN is that it need a large number of dataset to train on, for being at par with SVM and random forest, but
+The advantage can be considered that CNN uses direct spectogram of audio file, while SVM and random forest uses terms features to decide the emotion. 
+The CNN might be able to differentiate between similar emotions because of the structure of audio it studies.
